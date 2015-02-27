@@ -5,6 +5,9 @@ Template.channelList.helpers({
         channels: function () {
             return Channels.find({}, {sort: {modified: -1}})
         },
+        last_message: function(){
+            return Messages.findOne({channelID: this._id}, {sort: {created: 1}});
+        },
         content_preview: function () {
             var content = Messages.findOne({channelID: this._id}, {sort: {created: 1}});
             if (content) {
@@ -26,6 +29,7 @@ Template.channelList.events({
                 modified: Date.now(),
                 title: channelTitle
             });
+            document.getElementById('add_channel_input').value = "";
         }
     }
 });
