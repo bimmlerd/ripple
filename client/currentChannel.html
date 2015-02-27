@@ -1,26 +1,19 @@
 <template name="currentChannel">
   <!-- multiple tabs would be fucking fancy -->
   <div class="panel panel-default">
-    {{#each messages}}
-      <p><span class="label label-default">{{author}}:</span>{{content}}</p>
-    {{/each}}
     <div class="panel-heading">
       <h3 class="panel-title">Channel title</h3>
     </div>
     <div class="panel-body">
-      <p><span class="label label-default">dancer:</span>Some random message blah blah blah</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <div class="alert alert-success" role="alert">Maybe different colors based on author? might be annoying though</div>
-      <div class="alert alert-info" role="alert">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-      <div class="alert alert-warning" role="alert">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-      <div class="alert alert-danger" role="alert">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+      {{#each messages}}
+        <p><span class="label label-default">{{author}}:</span>{{content}}</p>
+      {{/each}}
     </div>
     <div id="new_message">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Message">
+        <input type="text" class="form-control" id="new_message_input" placeholder="Message">
         <span class="input-group-btn">
-          <button class="btn btn-default new-message" type="button">Go!</button>
+          <button class="btn btn-default new-message" type="button">Submit</button>
         </span>
       </div>
     </div>
