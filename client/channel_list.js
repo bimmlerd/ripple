@@ -6,15 +6,7 @@ Template.channelList.helpers({
             return Channels.find({}, {sort: {modified: -1}})
         },
         last_message: function(){
-            return Messages.findOne({channelID: this._id}, {sort: {created: 1}});
-        },
-        content_preview: function () {
-            var content = Messages.findOne({channelID: this._id}, {sort: {created: 1}});
-            if (content) {
-                return content.content.slice(0, 50); // TODO trim
-            } else {
-                return "empty";
-            }
+            return Messages.findOne({channelID: this._id}, {sort: {created: -1}});
         }
     }
 );
