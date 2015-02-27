@@ -11,16 +11,7 @@ Template.currentChannel.events({
 		"content": message,
 		"channelID": this.channelID
     });
-
     Channels.update({"_id": this.channelID}, {$set: {"modified": Date.now()}})
-
-// Message = {
-// 	"created": 0,
-// 	"author": "user",
-// 	"content": "This is le sample message",
-// 	"channelID": "kbsSiW49MMQtHWshR"
-// }
-
     // Clear form
     input_element.value = "";
 	}
