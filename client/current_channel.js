@@ -6,11 +6,14 @@ Template.currentChannel.events({
     var message = input_element.value;
 
     Messages.insert({
-		"created": new Date(),
+		"created": Date.now(),
 		"author": "user",
 		"content": message,
 		"channelID": this.channelID
     });
+
+    Channels.update({"_id": this.channelID}, {$set: {"modified": Date.now()}})
+
 // Message = {
 // 	"created": 0,
 // 	"author": "user",
