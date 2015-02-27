@@ -1,1 +1,12 @@
 /* CSS declarations go here */
+#main_container {
+    padding-top: 50px;
+}
+
+#add_channel_form {
+    padding-bottom: 10px;
+}
+
+#add_channel_form .input-group {
+    width: 100%;
+}

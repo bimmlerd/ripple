@@ -3,7 +3,7 @@
  */
 Template.channelList.helpers({
         channels: function () {
-            return Channels.find({}, {sort: {created: 1}})
+            return Channels.find({}, {sort: {modified: -1}})
         },
         content_preview: function () {
             var content = Messages.findOne({channelID: this._id, sort: {created: 1}});
