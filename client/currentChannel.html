@@ -1,21 +1,23 @@
 <template name="currentChannel">
   <!-- multiple tabs would be fucking fancy -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{channelTitle}}</h3>
-    </div>
-    <div class="panel-body">
-      {{#each messages}}
-        <p><span class="label label-default">{{author}}:</span>{{content}}</p>
-      {{/each}}
-    </div>
-    <div id="new_message">
-      <div class="input-group">
-        <input type="text" class="form-control" id="new_message_input" placeholder="Message">
-        <span class="input-group-btn">
-          <button class="btn btn-default new-message" type="button">Submit</button>
-        </span>
+  {{#if channelID}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{channelTitle}}</h3>
+      </div>
+      <div class="panel-body">
+        {{#each messages}}
+          <p><span class="label label-default">{{author}}:</span>{{content}}</p>
+        {{/each}}
+      </div>
+      <div id="new_message">
+        <div class="input-group">
+          <input type="text" class="form-control" id="new_message_input" placeholder="Message">
+          <span class="input-group-btn">
+            <button class="btn btn-default new-message" type="button">Submit</button>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  {{/if}}
 </template>
