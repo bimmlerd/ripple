@@ -1,9 +1,9 @@
 <template name="currentChannel">
   <!-- multiple tabs would be fucking fancy -->
   <div class="panel panel-default">
-    <!-- {{#each posts}}
-      {{> post}}
-    {{/each}} -->
+    {{#each messages}}
+      <p><span class="label label-default">{{author}}:</span>{{content}}</p>
+    {{/each}}
     <div class="panel-heading">
       <h3 class="panel-title">Channel title</h3>
     </div>
